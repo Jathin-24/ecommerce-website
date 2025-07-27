@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Products</title>
+  <link rel="stylesheet" href="style/style.css" />
+  <script defer src="script/script.js"></script>
+  <script defer src="data/products.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="index.html">ShopEase</a></div>
+    <div class="cart-link">
+      <a href="cart.html">🛒 Cart</a>
+    </div>
+  </header>
+
+  <main class="product-listing-page">
+    <aside class="filters">
+      <h3>Filter By</h3>
+      <label>Price:
+        <select id="price-filter">
+          <option value="all">All</option>
+          <option value="0-500">Below ₹500</option>
+          <option value="500-1000">₹500 - ₹1000</option>
+          <option value="1000+">Above ₹1000</option>
+        </select>
+      </label>
+    </aside>
+
+    <section class="product-grid" id="product-grid">
+      <!-- Product cards will be injected here by JS -->
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 ShopEase. All rights reserved.</p>
+  </footer>
+</body>
+</html>

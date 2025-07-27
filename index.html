@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShopEase - Home</title>
+  <link rel="stylesheet" href="style/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <div class="logo">ShopEase</div>
+    <div class="cart-link">
+      <a href="cart.html">🛒 Cart</a>
+    </div>
+  </header>
+
+  <section class="banner">
+    <img src="assets/banner.png" alt="Big Sale Banner" />
+  </section>
+
+  <main class="categories">
+    <h2>Browse by Categories</h2>
+    <div class="category-grid">
+      <a href="category.html?category=electronics" class="category-card">📱 Electronics</a>
+      <a href="category.html?category=clothing" class="category-card">👗 Clothing</a>
+      <a href="category.html?category=accessories" class="category-card">🎧 Accessories</a>
+      <a href="category.html?category=home" class="category-card">🏠 Home</a>
+      <a href="category.html?category=footwear" class="category-card">👟 Footwear</a>
+      <a href="category.html?category=laptops" class="category-card">💻 Laptops</a>
+      <a href="category.html?category=fashion" class="category-card">🕶️ Fashion</a>
+      <a href="category.html?category=books" class="category-card">📚 Books</a>
+      <a href="category.html?category=grocery" class="category-card">🍔 Grocery</a>
+      <a href="category.html?category=baby" class="category-card">🍼 Baby Products</a>
+    </div>
+  </main>
+  <header>
+    <h1>All Products</h1>
+  </header>
+
+  <main>
+    <div id="product-list" class="product-grid"></div>
+  </main>
+
+  <script src="data/products.js"></script>
+  <script>
+    // Wait for DOM to load
+    document.addEventListener("DOMContentLoaded", () => {
+      const productList = document.getElementById("product-list");
+
+      // Loop through products from products.js
+      products.forEach(product => {
+        const card = document.createElement("div");
+        card.className = "product-card";
+
+        card.innerHTML = `
+          <img src="${product.image}" alt="${product.name}" />
+          <h3>${product.name}</h3>
+          <p>₹${product.price}</p>
+        `;
+
+        productList.appendChild(card);
+      });
+    });
+  </script>
+
+  <footer>
+    <p>&copy; 2025 ShopEase. All rights reserved.</p>
+  </footer>
+</body>
+</html>
